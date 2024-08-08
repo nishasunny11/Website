@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nature Medicure</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #F5F5F5;
+            color: #333;
+        }
+        header {
+            background-color: #000080; /* Royal Blue */
+            color: #FFD700; /* Silver */
+            padding: 2px; /* Adjusted padding */
+            text-align: center;
+        }
+        button{
+            background-color:#000080;
+            color:white;
+            padding: 5px;
+            margin-top: 10px;
+        }
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #FFD700; /* Gold */
+            padding: 10px 20px;
+        }
+        nav a {
+            color: #000080; /* Royal Blue */
+            margin: 0 15px;
+            text-decoration: none;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        .banner-content {
+            color: #000080; /* Royal Blue */
+            text-align: center;
+        }
+        .banner-content h2 {
+            margin: 0;
+            font-size: 18px;
+        }
+        .banner-content p {
+            margin: 0;
+            font-size: 14px;
+        }
+        .section {
+            padding: 20px;
+            margin: 20px 0;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .services {
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+            color:#6e6e6e;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .services h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .services .cards {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            gap: 20px;
+        }
+        .card {
+            background-color: #FFF;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            width: 300px;
+        }
+        .card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        .card-content {
+            padding: 15px;
+        }
+        .card-content h3 {
+            margin-top: 0;
+            font-size: 18px;
+            color: #000080; /* Royal Blue */
+        }
+        .card-content p {
+            margin-bottom: 0;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        /* Popup Styles */
+        .popup {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+        .popup-content {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+        }
+        .popup img {
+            width: 300px;
+            height: 300px;
+        }
+        .popup-close {
+            cursor: pointer;
+            background: #000080; /* Royal Blue */
+            color: white;
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>🌿 Nature Medicure</h1>
+        <p>Blending Tradition with Innovation in Herbal Care</p>
+    </header>
+
+    <nav>
+        <div class="banner-content">
+            <h2>Welcome to Nature Medicure</h2>
+            <p>Your trusted partner in herbal-based health solutions</p>
+        </div>
+        <div class="nav-links">
+            <a href="#intro">Our Intro</a>
+            <a href="#services">Our Services</a>
+            <a href="#" id="chatLink">Chat with Us</a>
+        </div>
+    </nav>
+
+    <div class="section" id="intro">
+        <h2 style="color:#000080">Our Introduction</h2>
+        <p>
+            At Nature Medicure, we carry forward a proud legacy as the third generation of Unani doctors. 
+            Established in 19XX, our practice is deeply rooted in the time-honored traditions of Unani medicine, 
+            which have been passed down through generations. Our approach combines ancient wisdom with modern 
+            techniques, ensuring that our treatments are both effective and in harmony with nature.
+        </p>
+        <p>
+            Our medicines are meticulously prepared in-house using only the finest natural ingredients. 
+            This allows us to maintain the highest standards of quality and purity, providing our patients 
+            with remedies that are both safe and powerful. Trust in our expertise, cultivated over decades, 
+            to bring you the best in herbal healthcare.
+        </p>
+    </div>
+  
+    <div class="section services" id="services">
+        <h2>Our Services</h2>
+        <div class="cards">
+            <div class="card">
+                <img src="chronic disease.webp" alt="Chronic Diseases">
+                <div class="card-content">
+                    <h3>Chronic Diseases</h3>
+                    <p>Specialized Unani treatments for managing conditions such as arthritis, asthma, and diabetes.</p>
+                    <a href="cd.html"><button>Click to know more</button></a>
+                </div>
+            </div>
+            <div class="card">
+                <img src="digestive health.jpg" alt="Digestive Health">
+                <div class="card-content">
+                    <h3>Digestive Health</h3>
+                    <p>Herbal remedies to promote digestive wellness and treat conditions like gastritis, ulcers, and constipation.</p>
+                    <button>Click to know more</button>
+                </div>
+            </div>
+            <div class="card">
+                <img src="skin care.avif" alt="Skin Care">
+                <div class="card-content">
+                    <h3>Skin Care</h3>
+                    <p>Natural treatments for skin conditions including eczema, psoriasis, and acne, using age-old Unani formulations.</p>
+                    <button>Click to know more</button>
+                </div>
+            </div>
+            <div class="card">
+                <img src="womeans health.jpeg" alt="Women's Health">
+                <div class="card-content">
+                    <h3>Women's Health</h3>
+                    <p>Tailored treatments for menstrual disorders, fertility issues, and hormonal imbalances.</p>
+                    <button>Click to know more</button>
+                </div>
+            </div>
+            <div class="card">
+                <img src="general wellness.png" alt="General Wellness">
+                <div class="card-content">
+                    <h3>General Wellness</h3>
+                    <p>Strengthening immunity and overall health with preventive Unani therapies.</p>
+                    <button>Click to know more</button>
+                </div>
+            </div>
+            <div class="card">
+                <img src="stress management.jpeg" alt="Stress Management">
+                <div class="card-content">
+                    <h3>Stress Management</h3>
+                    <p>Holistic approaches and remedies to alleviate stress and enhance mental well-being.</p>
+                    <button>Click to know more</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>Contact us via WhatsApp: <a href="#" id="chatLinkFooter" style="color: #FFD700;">Chat Now</a></p>
+        <p>&copy; www.naturemedicure.com. All rights reserved.</p>
+    </footer>
+
+    <!-- Popup for QR Code -->
+    <div class="popup" id="popup">
+        <div class="popup-content">
+            <img src="qr code.jpg" alt="QR Code">
+            <p>Scan this QR code to chat with us on WhatsApp!</p>
+            <button class="popup-close" id="popupClose">Close</button>
+        </div>
+    </div>
+
+    <script>
+        // Get elements
+        const chatLink = document.getElementById('chatLink');
+        const chatLinkFooter = document.getElementById('chatLinkFooter');
+        const popup = document.getElementById('popup');
+        const popupClose = document.getElementById('popupClose');
+
+        // Function to open popup
+        function openPopup() {
+            popup.style.display = 'flex';
+        }
+
+        // Function to close popup
+        function closePopup() {
+            popup.style.display = 'none';
+        }
+
+        // Event listeners for popup
+        chatLink.addEventListener('click', (e) => {
+            e.preventDefault();
+            openPopup();
+        });
+
+        chatLinkFooter.addEventListener('click', (e) => {
+            e.preventDefault();
+            openPopup();
+        });
+
+        popupClose.addEventListener('click', closePopup);
+
+        // Close popup when clicking outside of the popup content
+        window.addEventListener('click', (e) => {
+            if (e.target === popup) {
+                closePopup();
+            }
+        });
+    </script>
+
+</body>
+</html>

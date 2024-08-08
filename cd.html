@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chronic Diseases - Nature Medicure</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #F5F5F5;
+            color: #333;
+        }
+        header {
+            background-color: #000080; /* Royal Blue */
+            color: #FFD700; /* Silver */
+            padding: 15px;
+            text-align: center;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #FFD700; /* Gold */
+            padding: 10px 20px;
+        }
+        nav a {
+            color: #000080; /* Royal Blue */
+            margin: 0 15px;
+            text-decoration: none;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        .section {
+            padding: 20px;
+            margin: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .section img {
+            width: 900px;
+            height: 300px;
+            object-fit: cover;
+            margin-left: 140px;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+        }
+        /* Popup styles */
+        .popup {
+            display: none;
+            position: fixed;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            justify-content: center;
+            align-items: center;
+        }
+        .popup-content {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            position: relative;
+            text-align: center;
+        }
+        .popup-content img {
+            max-width: 100%;
+            height: auto;
+        }
+        .popup-close {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            cursor: pointer;
+            font-size: 20px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>🌿 Nature Medicure</h1>
+        <p>Blending Tradition with Innovation in Herbal Care</p>
+    </header>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="services.html">Our Services</a>
+        <a href="#" id="contactLink">Contact</a>
+    </nav>
+
+    <div class="section">
+        <h2 style="color:#000080">Chronic Diseases</h2>
+        <img src="cd.webp" alt="Chronic Diseases">
+        <p>
+            At Nature Medicure, we offer specialized Unani treatments for managing chronic diseases such as arthritis, asthma, and diabetes. 
+            Our holistic approach aims to address the root causes of these conditions through natural remedies and traditional practices.
+        </p>
+        <p>
+            Our experienced practitioners use time-tested Unani formulations and therapies to help alleviate symptoms and improve overall health. 
+            We emphasize personalized care and create treatment plans tailored to each individual's needs to ensure the best outcomes.
+        </p>
+    </div>
+
+    <footer>
+        <p>Contact us via WhatsApp: <a href="#" id="chatLinkFooter" style="color: #FFD700;">Chat Now</a></p>
+        <p>&copy; www.naturemedicure.com. All rights reserved.</p>
+    </footer>
+
+    <!-- Popup -->
+    <div id="popup" class="popup">
+        <div class="popup-content">
+            <span class="popup-close">&times;</span>
+            <h3>Chat with Us</h3>
+            <p>Scan the QR code below to start a chat with us on WhatsApp.</p>
+            <img src="qr code.jpg" alt="QR Code" width="200px" height="200px">
+        </div>
+    </div>
+
+    <script>
+        const contactLink = document.getElementById('contactLink');
+        const chatLinkFooter = document.getElementById('chatLinkFooter');
+        const popup = document.getElementById('popup');
+        const popupClose = document.querySelector('.popup-close');
+
+        function openPopup() {
+            popup.style.display = 'flex';
+        }
+
+        function closePopup() {
+            popup.style.display = 'none';
+        }
+
+        contactLink.addEventListener('click', (e) => {
+            e.preventDefault();
+            openPopup();
+        });
+
+        chatLinkFooter.addEventListener('click', (e) => {
+            e.preventDefault();
+            openPopup();
+        });
+
+        popupClose.addEventListener('click', closePopup);
+
+        // Close popup when clicking outside of the popup content
+        window.addEventListener('click', (e) => {
+            if (e.target === popup) {
+                closePopup();
+            }
+        });
+    </script>
+
+</body>
+</html>
